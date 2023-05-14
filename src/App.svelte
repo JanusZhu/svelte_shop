@@ -1,15 +1,17 @@
 <script>
-	let name = 'Janus';
-	let color = 'Black'
-	const changeColor = ()=> {
-		color == "Black" ? color = "White" : color = "Black";
-	}
+	import Nav from './components/Nav.svelte'
+	import Footer from './components/Footer.svelte'
+	import Shop from './components/Shop.svelte'
+	
+	
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Theme color {color}</p>
-	<button on:click={changeColor}>Change the color</button>
+	<Nav/>
+	<Shop/>
+	<Footer/>
+	
+	
 </main>
 
 <style>
