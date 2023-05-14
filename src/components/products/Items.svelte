@@ -1,15 +1,36 @@
 <script>
-    import product from './data.json';
-	let products = product.slice(0,5);
+    import ItemCard from './ItemCard.svelte';
+    import product from '../../data.json';
+	let products = product.slice();
 </script>
 <main>
-    <ul>
+
   {#each products as product (product.id)}
-    <li>
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-    </li>
+
+        <ItemCard>
+            <span slot="img">
+                <img src={product.image} alt={product.name}/>
+            </span>
+            
+            <span slot="name">{product.name}</span>
+            <span slot="price">Price: {product.price}</span>
+      
+      <p></p>
+      <p></p>
+      </ItemCard>
+
   {/each}
-</ul>
+
 </main>
+
+<style>
+    img{
+        max-width:10rem;
+        max-height:10rem
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 400px);
+    }
+</style>
