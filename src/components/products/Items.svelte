@@ -1,11 +1,10 @@
 <script>
     import ItemCard from './ItemCard.svelte';
-    import product from '../../data.json';
-	let products = product.slice();
+    export let filteredProducts;
 </script>
 <main>
 
-  {#each products as product (product.id)}
+  {#each filteredProducts as product (product.id)}
 
         <ItemCard>
             <span slot="img">
@@ -25,12 +24,13 @@
 
 <style>
     img{
-        max-width:10rem;
-        max-height:10rem
+        width: 100px;
+        max-height:150px
     }
 
     main{
         display: grid;
-        grid-template-columns: repeat(auto-fill, 400px);
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem
     }
 </style>

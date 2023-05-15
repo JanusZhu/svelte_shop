@@ -1,6 +1,0 @@
-<script>
-
-</script>
-<main>
-    
-</main>
