@@ -14,7 +14,7 @@
 <main>
 	<Modal {showModal} {handleModal}/>
 	<Nav {handleModal}/>
-	<Shop/>
+	<Shop on:open={handleModal}/>
 	<Footer/>
 	
 	

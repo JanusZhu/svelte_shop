@@ -8,7 +8,7 @@
 
 
     {#each categories as category (category)}
-         <a class="category" on:click={()=>{handleFilter(category)}}>{category.toUpperCase()}</a>
+         <a class="category"  on:keydown on:click={()=>{handleFilter(category)}}>{category.toUpperCase()}</a>
     {/each}
 
     
@@ -38,5 +38,9 @@
     .category {
         text-align: left;
         color: black;
+    }
+
+    a {
+        cursor:pointer
     }
 </style>

@@ -9,18 +9,16 @@
 
     </slot>
 
-    <slot name="price">
+    <slot name="count">
 
     </slot>
-    <slot name="add">
-        
-    </slot>
+    
 
 </article>
 
 <style>
-	.card {
-		width: 300px;
+    .card {
+		width: 5rem;
         height: auto;
 		border: 1px solid #aaa;
 		border-radius: 2px;
@@ -30,14 +28,5 @@
         display: flex;
         flex-direction: column;
 	}
-    .image {
-        width: 300px;
-        height:150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: solid 1px rgb(198, 192, 192);
-    }
 
-   
 </style>

@@ -1,6 +1,17 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
     import ItemCard from './ItemCard.svelte';
     export let filteredProducts;
+    import {shop} from "../Stores/store"
+    const dispatch = createEventDispatcher();
+
+    const addToCart = (id) => {
+        dispatch('open');
+        shop.increment(id)
+        console.log(shop)
+    }
+
+    
 </script>
 <main>
 
@@ -12,10 +23,9 @@
             </span>
             
             <span slot="name">{product.name}</span>
-            <span slot="price">Price: {product.price}</span>
+            <span slot="price">Price: ${product.price}</span>
+            <span slot="add"><button on:click={addToCart(product.id)}>Add to Cart</button></span>
       
-      <p></p>
-      <p></p>
       </ItemCard>
 
   {/each}

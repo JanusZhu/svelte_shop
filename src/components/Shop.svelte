@@ -2,10 +2,10 @@
   import Items from './products/Items.svelte'
   import Category from './products/Category.svelte'
   import products from '../data.json';
- 
-  let selectedCategory = "all"
 
-  let filteredProducts = products
+ 
+  let selectedCategory = "all";
+  let filteredProducts = products;
   const handleFilter= (category)=>{
     if (category === "all"){
       filteredProducts = products;
@@ -20,7 +20,7 @@
 
 <main>
   <Category {handleFilter} {selectedCategory}/>
-  <Items {filteredProducts}/>
+  <Items on:open {filteredProducts} />
 
 </main>
 

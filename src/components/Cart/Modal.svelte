@@ -1,6 +1,7 @@
 <script>
     export let showModal = false;
     export let handleModal
+    import Cart from './Cart.svelte'
 </script>
 
 <main>
@@ -10,7 +11,7 @@
         <div class="modal">
             <h3 on:click={handleModal} on:keyup>x</h3>
             <h2>Your shopping bag</h2>
-            <div>Cart</div>
+            <Cart/>
         </div>
     {/if}
     
