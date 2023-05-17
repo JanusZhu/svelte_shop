@@ -26,6 +26,7 @@
     h1, h2 {
         padding: 0;
         text-align: left;
+        margin: 0.5rem;
     }
     .header{
         height:150px;

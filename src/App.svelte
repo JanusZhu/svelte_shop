@@ -2,12 +2,18 @@
 	import Nav from './components/Nav.svelte'
 	import Footer from './components/Footer.svelte'
 	import Shop from './components/Shop.svelte'
+	import Modal from './components/Cart/Modal.svelte'
+	let showModal = false;
+	const handleModal = ()=> {
+		showModal = !showModal
+	}
 	
 	
 </script>
 
 <main>
-	<Nav/>
+	<Modal {showModal} {handleModal}/>
+	<Nav {handleModal}/>
 	<Shop/>
 	<Footer/>
 	
@@ -17,9 +23,9 @@
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
+		padding: 0;
 		max-width: 240px;
-		margin: 0 auto;
+		margin: 0;
 	}
 
 

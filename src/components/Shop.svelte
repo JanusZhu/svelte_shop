@@ -2,6 +2,7 @@
   import Items from './products/Items.svelte'
   import Category from './products/Category.svelte'
   import products from '../data.json';
+ 
   let selectedCategory = "all"
 
   let filteredProducts = products
@@ -27,6 +28,7 @@
   main {
     display: flex;
     flex-direction: flex;
-    gap: 20px
+    gap: 20px;
+    margin-top:2rem;
   }
 </style>
