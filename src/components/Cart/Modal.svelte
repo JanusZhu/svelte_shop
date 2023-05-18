@@ -12,6 +12,7 @@
             <h3 on:click={handleModal} on:keyup>x</h3>
             <h2>Your shopping bag</h2>
             <Cart/>
+
         </div>
     {/if}
     
@@ -23,6 +24,7 @@
         height: 100%;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9
     }
     .modal{
         color: black;
@@ -31,12 +33,17 @@
         position: fixed;
         background-color: white;
         right:0;
-        padding-top:5rem
+        padding-top:5rem;
+        z-index:10;
+        overflow-y:scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: felx-start;
     }
     h3 {
         position: fixed;
-        right: 3rem;
-        top:2rem;
+        right: 1.5rem;
+        top:1.5rem;
         cursor: pointer
     }
 </style>

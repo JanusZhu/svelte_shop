@@ -39,7 +39,7 @@
     "id": 5,
     "name": "John Hardy Women's Dot Gold & Silver Pendant Necklace",
     "description": "From our Dot Collection, this distinctive necklace features a playful mix of gold and silver dots suspended from a delicate chain. Wear it alone or layer it...",
-    "price": 695,
+    "price": 695.0,
     "category": "jewelry",
     "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     "inventory_count": 100
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "Solid Gold Petite Micropave ",
     "description": "This simply beautiful necklace is Imperial and elegant, fit for any occasion as daily wearing home and office. Carefully packed in beautiful jewelry box. Absolutely...",
-    "price": 168,
+    "price": 168.0,
     "category": "jewelry",
     "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     "inventory_count": 100
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
     "description": "USB 3.0 and USB 2.0 compatibility Fast data transfers Improve PC performance High Capacity",
-    "price": 64,
+    "price": 64.0,
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     "inventory_count": 100
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
     "description": "Easy upgrade for faster boot-up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive. Based on published specifications and internal...",
-    "price": 109,
+    "price": 109.0,
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     "inventory_count": 100
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III",
     "description": "3D NAND flash are applied to deliver high transfer speeds. Remarkable transfer speeds that enable faster bootup and improved overall system performance.",
-    "price": 109,
+    "price": 109.0,
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     "inventory_count": 100
@@ -102,7 +102,7 @@
     "id": 12,
     "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
     "description": "Expand your PS4 gaming experience. Play anywhere. Quick and easy setup. Sleek design with high capacity.",
-    "price": 114,
+    "price": 114.0,
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
     "inventory_count": 100
@@ -111,7 +111,7 @@
     "id": 13,
     "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
     "description": "21.5 inches Full HD (1920 x 1080) widescreen IPS display. And Radeon free sync technology. No compatibility for VESA Mount.",
-    "price": 599,
+    "price": 599.0,
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     "inventory_count": 100

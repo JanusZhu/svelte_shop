@@ -12,6 +12,9 @@
     <slot name="price">
 
     </slot>
+    <slot name="inventory">
+
+    </slot>
     <slot name="add">
         
     </slot>

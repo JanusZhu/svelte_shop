@@ -2,6 +2,7 @@
   import Items from './products/Items.svelte'
   import Category from './products/Category.svelte'
   import products from '../data.json';
+  
 
  
   let selectedCategory = "all";
