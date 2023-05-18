@@ -1,6 +1,8 @@
 <script>
     import {shop, inventory} from '../Stores/store'
     import CartItem from './CartItem.svelte'
+    import products from '../../data.json'
+    
     let isCheckedOut = false
     /* get shop info*/ 
     let cartItems 
@@ -12,24 +14,23 @@
     inventory.subscribe(value => {
         currentInventory = value
     })
-    import products from '../../data.json'
-    console.log(cartItems)
+
     
     let defaultShop = {};
     for (let product of products) {
         defaultShop[product.id] = 0;
     }
     /*calculate the subtotal price*/
-    const calculateSubtotal = ()=> {
+    const calculateSubtotal = (counts)=> {
         let res = 0;
         for(let product of products){
-            if (cartItems[product.id]){
-                res += cartItems[product.id] * Number(product.price)
+            if (counts[product.id]){
+                res += counts[product.id] * Number(product.price)
             }
         }
-        return Math.round(res * 100) / 100
+        return (Math.round(res * 100) / 100).toFixed(2)
     }
-    $: total = calculateSubtotal()
+    $: total = calculateSubtotal(cartItems);
     const handleCheckout = ()=> {
         for(let product of products){
             if (cartItems[product.id]){
@@ -55,33 +56,36 @@
 </script>
 
 <main>
+    {#if !checkEmpty() && !isCheckedOut}
     <div>
-{#each products as product (product.id)}
+        {#each products as product (product.id)}
+        
+            {#if cartItems[product.id]}
+            <CartItem id ={product.id}>
+            <span slot="img">
+                <img src={product.image} alt={product.name}/>
+            </span>
+            
+            <span slot="name">{product.name}</span>
+            
+            <span slot="price">${(Math.round(cartItems[product.id] * product.price*100)/100).toFixed(2)}</span>
+            </CartItem>
+           
+            
 
-    {#if cartItems[product.id]}
-    <CartItem>
-    <span slot="img">
-        <img src={product.image} alt={product.name}/>
-    </span>
-    
-    <span slot="name">{product.name}</span>
-    <span slot="count">Count: {cartItems[product.id]}</span>
-    <span slot="price">${product.price}</span>
-    </CartItem>
+            {/if}
+            
+        {/each}
+    </div>
+    <div>
+        <h3>Subtotal: ${total}</h3>
+    </div>
+    <div>
+        <button on:click={()=>{handleCheckout()}}>Checkout</button>
+    </div>
+    {:else}
+        <div><h3>Empty shopping cart</h3></div>
     {/if}
-    
-
-{/each}
-</div>
-{#if !checkEmpty() && !isCheckedOut}
-<div>
-    <h3>Subtotal: ${total}</h3>
-</div>
-<div>
-    <button on:click={()=>{handleCheckout()}}>Checkout</button>
-</div>
-{/if}
-
 
 
 </main>

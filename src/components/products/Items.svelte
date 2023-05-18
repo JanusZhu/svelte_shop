@@ -14,7 +14,6 @@
     const addToCart = (id) => {
         dispatch('open');
         shop.increment(id)
-        console.log(shop)
     }
 
     
