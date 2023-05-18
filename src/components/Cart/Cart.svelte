@@ -1,6 +1,7 @@
 <script>
     import {shop, inventory} from '../Stores/store'
     import CartItem from './CartItem.svelte'
+    let isCheckedOut = false
     /* get shop info*/ 
     let cartItems 
     shop.subscribe(value => {
@@ -39,6 +40,17 @@
             }
         }
         shop.set(defaultShop);
+        isCheckedOut = true
+
+    }
+
+    const checkEmpty = () => {
+        for (let product of products){
+            if(cartItems[product.id] > 0 ){
+                return false
+            }
+        }
+        return true
     }
 </script>
 
@@ -61,13 +73,15 @@
 
 {/each}
 </div>
-
+{#if !checkEmpty() && !isCheckedOut}
 <div>
     <h3>Subtotal: ${total}</h3>
 </div>
 <div>
     <button on:click={()=>{handleCheckout()}}>Checkout</button>
 </div>
+{/if}
+
 
 
 </main>
