@@ -38,9 +38,6 @@
     .category {
         text-align: left;
         color: black;
-    }
-
-    a {
         cursor:pointer
     }
 </style>
