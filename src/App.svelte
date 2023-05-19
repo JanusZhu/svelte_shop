@@ -1,38 +1,25 @@
 <script>
-	import Nav from './components/Nav.svelte'
+    import {Router, Route} from "svelte-navigator";
+    import Home from "./routes/Home.svelte";
+    import ProductPage from "./routes/ProductPage.svelte";
+    import Modal from './components/Cart/Modal.svelte'
+    import Nav from './components/Nav.svelte'
 	import Footer from './components/Footer.svelte'
-	import Shop from './components/Shop.svelte'
-	import Modal from './components/Cart/Modal.svelte'
-	let showModal = false;
+    let showModal = false;
 	const handleModal = ()=> {
 		showModal = !showModal
 	}
-	
-	
-</script>
+  </script>
+  
 
-<main>
-	<Modal {showModal} {handleModal}/>
-	<Nav {handleModal}/>
-	<Shop on:open={handleModal}/>
-	<Footer/>
-	
-	
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 0;
-		max-width: 240px;
-		margin: 0;
-	}
-
-
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+    
+    <Router>
+        <Modal {showModal} {handleModal}/>
+	    <Nav {handleModal}/>
+        <Route path="/">
+            <Home {handleModal}/>
+        </Route>
+        <Route path="products/:id" let:params>
+            <ProductPage id={params.id} />
+        </Route>
+    </Router>

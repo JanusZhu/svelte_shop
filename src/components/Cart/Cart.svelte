@@ -84,7 +84,7 @@
         <button on:click={()=>{handleCheckout()}}>Checkout</button>
     </div>
     {:else}
-        <div><h3>Empty shopping cart</h3></div>
+        <div><h3>Your shopping cart is empty.</h3></div>
     {/if}
 
 

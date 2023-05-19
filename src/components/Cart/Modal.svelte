@@ -46,4 +46,7 @@
         top:1.5rem;
         cursor: pointer
     }
+    h2{
+        text-align: center;
+    }
 </style>
