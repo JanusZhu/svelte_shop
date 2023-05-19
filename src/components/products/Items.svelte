@@ -4,7 +4,7 @@
     import ItemCard from './ItemCard.svelte';
     import {shop, inventory} from "../Stores/store"
     export let filteredProducts;
-
+    
     
     /* get shop info*/ 
     let cartItems 
@@ -29,6 +29,7 @@
     
 </script>
 <main>
+    <div class="main">
 
   {#each filteredProducts as product (product.id)}
         {#if currentInventory[product.id]}
@@ -47,7 +48,7 @@
         
 
   {/each}
-
+</div>
 </main>
 
 <style>
@@ -56,7 +57,7 @@
         max-height:150px
     }
 
-    main{
+    .main{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem

@@ -1,4 +1,8 @@
-<article class="card">
+<script>
+    import {fade} from 'svelte/transition'
+</script>
+<article>
+    <div class="card" in:fade="{{delay: 250, duration: 300}}">
 	<div class="image">
     <slot name="img">
 
@@ -18,6 +22,7 @@
     <slot name="add">
         
     </slot>
+</div>
 
 </article>
 

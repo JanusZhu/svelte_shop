@@ -2,13 +2,15 @@
     export let showModal = false;
     export let handleModal
     import Cart from './Cart.svelte'
+    import {slide} from 'svelte/transition'
+    import { quintOut } from 'svelte/easing';
 </script>
 
 <main>
 
     {#if showModal}
     <div class="backdrop" on:click={handleModal} on:keyup/>
-        <div class="modal">
+        <div class="modal" transition:slide="{{delay: 100, duration: 500, easing: quintOut, axis: 'x'}}">
             <h3 on:click={handleModal} on:keyup>x</h3>
             <h2>Your shopping bag</h2>
             <Cart/>

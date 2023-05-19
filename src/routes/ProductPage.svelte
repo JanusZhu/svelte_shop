@@ -2,7 +2,7 @@
     export let id;
     import products from '../data.json'
     let product = products.find((product)=> product.id == id)
-
+    import {fade} from 'svelte/transition'
     
     import {shop, inventory} from "../components/Stores/store"
 
@@ -27,17 +27,19 @@
 
 </script>
 
-<main>
+<main >
+    <div class="main" in:fade>
 <div class="image"><img src={product.image} alt={product.name}/></div>
 <div class="info">
 <div class="name"><h2>{product.name}</h2></div>
 <div class="price">Price: ${product.price}</div>
 <div class="inventory">Inventory: {currentInventory[product.id]}</div>
 <div class="add"><button on:click={()=>{addToCart(product.id)}}>Add to Cart</button></div></div>
+</div>
 </main>
 
 <style>
-main {
+.main {
     padding-top: 5rem;
     display: flex;
     justify-content: center;

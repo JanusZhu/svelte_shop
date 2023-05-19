@@ -2,7 +2,7 @@
   import Items from './products/Items.svelte'
   import Category from './products/Category.svelte'
   import products from '../data.json';
-  
+  import {fade} from 'svelte/transition'
 
  
   let selectedCategory = "all";
@@ -19,7 +19,7 @@
   }
 </script>
 
-<main>
+<main >
   <Category {handleFilter} {selectedCategory}/>
   <Items on:open {filteredProducts} />
 
