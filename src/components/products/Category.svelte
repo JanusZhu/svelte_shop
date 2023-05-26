@@ -8,7 +8,7 @@
 
 
     {#each categories as category (category)}
-         <a class="category"  on:keydown on:click={()=>{handleFilter(category)}}>{category.toUpperCase()}</a>
+         <a class="category" href="#nothing" on:keydown on:click={()=>{handleFilter(category)}}>{category.toUpperCase()}</a>
     {/each}
 
     
