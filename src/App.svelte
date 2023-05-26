@@ -14,8 +14,7 @@
 
     
     <Router>
-        <Modal {showModal} {handleModal}/>
-        
+        <Modal {showModal} {handleModal}/>        
 	    <Nav {handleModal}/>
         <Route path="/">
             <Home {handleModal}/>
