@@ -1,6 +1,6 @@
 # Shopping-Cart
 
-A simple fake store React app.
+A simple fake store Svelte app.
 
 [Live Demo](https://6470e784e1ba4502710c711a--fancy-longma-99776e.netlify.app/) :point_left:
 
