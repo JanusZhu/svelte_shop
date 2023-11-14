@@ -1,19 +1,17 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Shopping-Cart
 
----
+A simple fake store React app.
 
-# svelte app
+[Live Demo](https://6470e784e1ba4502710c711a--fancy-longma-99776e.netlify.app/) :point_left:
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+## Built with
+
+- [Svelte]
+- [Fake Store API](https://fakestoreapi.com/)
+
 
 
 ## Get started
