@@ -2,7 +2,7 @@
 
 A simple fake store Svelte app.
 
-[Live Demo](https://6470e784e1ba4502710c711a--fancy-longma-99776e.netlify.app/) :point_left:
+[Live Demo](https://fancy-longma-99776e.netlify.app/) :point_left:
 
 
 ```
